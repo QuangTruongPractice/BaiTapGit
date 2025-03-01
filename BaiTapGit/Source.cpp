@@ -16,6 +16,16 @@ bool isPrime(int n) {
     return true; // Nếu không chia hết cho số nào, là số nguyên tố
 }
 
+bool isLeapYear(int year) {
+    // Kiểm tra nếu năm chia hết cho 4 và (nếu chia hết cho 100 thì phải chia hết cho 400)
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
 int main() {
     int num;
     cout << "Nhap mot so nguyen duong: ";
